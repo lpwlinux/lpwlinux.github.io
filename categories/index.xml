@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Let&#39;s play with Linux</title>
-    <link>lpwlinux.github.io/categories/</link>
+    <link>http://lpwlinux.github.io/categories/</link>
     <description>Recent content in Categories on Let&#39;s play with Linux</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="lpwlinux.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="http://lpwlinux.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

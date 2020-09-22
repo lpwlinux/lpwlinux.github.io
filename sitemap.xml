@@ -3,26 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>lpwlinux.github.io/posts/hello-world/</loc>
+    <loc>http://lpwlinux.github.io/</loc>
+    <lastmod>2020-09-22T13:18:24+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lpwlinux.github.io/posts/</loc>
+    <lastmod>2020-09-22T13:18:24+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lpwlinux.github.io/posts/testing-hugo/</loc>
+    <lastmod>2020-09-22T13:18:24+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lpwlinux.github.io/posts/hello-world/</loc>
     <lastmod>2020-09-22T12:59:08+03:00</lastmod>
   </url>
   
   <url>
-    <loc>lpwlinux.github.io/</loc>
-    <lastmod>2020-09-22T12:59:08+03:00</lastmod>
+    <loc>http://lpwlinux.github.io/categories/</loc>
   </url>
   
   <url>
-    <loc>lpwlinux.github.io/posts/</loc>
-    <lastmod>2020-09-22T12:59:08+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>lpwlinux.github.io/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>lpwlinux.github.io/tags/</loc>
+    <loc>http://lpwlinux.github.io/tags/</loc>
   </url>
   
 </urlset>
