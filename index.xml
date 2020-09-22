@@ -6,16 +6,7 @@
     <description>Recent content on Let&#39;s play with Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 22 Sep 2020 13:18:24 +0300</lastBuildDate><atom:link href="https://lpwlinux.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Testing Hugo</title>
-      <link>https://lpwlinux.github.io/posts/testing-hugo/</link>
-      <pubDate>Tue, 22 Sep 2020 13:18:24 +0300</pubDate>
-      
-      <guid>https://lpwlinux.github.io/posts/testing-hugo/</guid>
-      <description>Test 4!</description>
-    </item>
-    
+    <lastBuildDate>Tue, 22 Sep 2020 12:59:08 +0300</lastBuildDate><atom:link href="https://lpwlinux.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello World</title>
       <link>https://lpwlinux.github.io/posts/hello-world/</link>
