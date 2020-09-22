@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Site</title>
+    <link>http://example.org/</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 22 Sep 2020 12:59:08 +0300</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello World</title>
+      <link>http://example.org/posts/hello-world/</link>
+      <pubDate>Tue, 22 Sep 2020 12:59:08 +0300</pubDate>
+      
+      <guid>http://example.org/posts/hello-world/</guid>
+      <description>Hello world! The first necessary post in a tech blog! My name is Konstantinos, I&amp;rsquo;m a junior-ish system administrator, currently working in a devops role. My pursuit is to get a better understanding of Linux, networking, all the apps that are used in the space that make our lives easier plus everything else that seems interesting to me!
+The idea behind this blog (subject to change though) is to have posts of varying diffuculty, ranging from easy and everyday stuff, basic operations to make our life simpler, to medium where we will delve in setting up applications and harder to bring multiple systems together with technologies such as containers etc.</description>
+    </item>
+    
+  </channel>
+</rss>
