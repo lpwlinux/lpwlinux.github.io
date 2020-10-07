@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Navigating the filesystem and manipulating files - Let&#39;s play with Linux</title><meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta property="og:description" content="" />
+	<meta name="twitter:description" content="" />
+	<meta name="description" content="" />
+	<meta name="description" content="" />
+
+	<meta property="og:title" content="Navigating the filesystem and manipulating files | Let&#39;s play with Linux" />
+	<meta name="twitter:title" content="Navigating the filesystem and manipulating files | Let&#39;s play with Linux" />
+
+	<meta property="og:image" content=""/>
+	<meta itemprop="name" content="Navigating the filesystem and manipulating files | Let&#39;s play with Linux" />
+	<meta name="application-name" content="Navigating the filesystem and manipulating files | Let&#39;s play with Linux" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:title" content="Navigating the filesystem and manipulating files" />
+<meta property="og:description" content="In the second post of the blog post we will discuss ways to navigate inside the filesystem, finding the files we are looking for and manipulating the text inside them.
+Navigation First of all, let&rsquo;s start with &ldquo;navigation&rdquo;. Quotes in place because I am taking for granted you know how to cd into a directory and thus labeling navigation the way to find what you are looking for and then getting to it." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lpwlinux.github.io/posts/navigation-and-file-manipulation/" />
+<meta property="article:published_time" content="2020-09-28T20:29:03+03:00" />
+<meta property="article:modified_time" content="2020-09-28T20:29:03+03:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Navigating the filesystem and manipulating files"/>
+<meta name="twitter:description" content="In the second post of the blog post we will discuss ways to navigate inside the filesystem, finding the files we are looking for and manipulating the text inside them.
+Navigation First of all, let&rsquo;s start with &ldquo;navigation&rdquo;. Quotes in place because I am taking for granted you know how to cd into a directory and thus labeling navigation the way to find what you are looking for and then getting to it."/>
+<script src="https://lpwlinux.github.io/js/feather.min.js"></script>
+	
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" media="screen" href="https://lpwlinux.github.io/css/main.css" /><link rel="stylesheet" type="text/css" href="https://lpwlinux.github.io/css/dark.css" media="(prefers-color-scheme: dark)" />
+</head><body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://lpwlinux.github.io/">Let&#39;s play with Linux</a>
+	</div>
+	<nav>
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Navigating the filesystem and manipulating files</h1>
+			<div class="meta">Posted on Sep 28, 2020</div>
+		</div>
+		
+
+		<section class="body">
+			<p>In the second post of the blog post we will discuss ways to navigate inside the filesystem, finding the files we are looking for and manipulating the text inside them.</p>
+<h1 id="navigation">Navigation</h1>
+<p>First of all, let&rsquo;s start with &ldquo;navigation&rdquo;. Quotes in place because I am taking for granted you know how to cd into a directory and thus labeling navigation the way to find what you are looking for and then getting to it.</p>
+<h2 id="grep">Grep</h2>
+<p>Look for text inside files
+<code>grep -iR &quot;name&quot; /etc/apache2/</code>
+The -i is ignoring the case of the text and the -R is a recursive lookup on all folders under our targeted path.</p>
+<p>or when for example you are following a log file and want to only show a line with the relevant text
+<code>tail -f /var/log/auth.log | grep bob</code>
+to show the lines where bob is trying to log in on the system.</p>
+<h2 id="ag">AG</h2>
+<p>ag / silversearcher does not come preinstalled on a system but is a more powerful version of grep when looking up for text.
+<code>ag &quot;name&quot; /etc/apache2</code></p>
+<h2 id="find">Find</h2>
+<p>The find command allows you to find as per the documentation files(files, directories, symlinks) in a directory hierarchy</p>
+<h2 id="finding-directories">Finding directories</h2>
+<p><code>find / -type d -name &quot;cron&quot;</code></p>
+<h2 id="finding-files">Finding files</h2>
+<p><code>find /bin -type f -name &quot;grep&quot;</code></p>
+<h2 id="finding-symlinks">Finding symlinks</h2>
+<p><code>find / -type l -name &quot;vim&quot;</code></p>
+<p>You can also use regex to find for example all files ending in .log with
+<code>find /var/log/apache2 -type f -name &quot;*.log</code></p>
+<h2 id="locate">Locate</h2>
+<p>Locate is like a more powerful version of find because it depends on a database that is located on your system thus making it faster.
+That means thought that the database has to be updated regularly by running the comand <code>updatedb</code>. Locate does not come pre-installed on your system but by installing its package you will get an entry on <code>/etc/cron.daily/mlocate</code> that updates the database daily.</p>
+<p><code>locate index.html /var/www/</code></p>
+<h1 id="manipulation">Manipulation</h1>
+<h2 id="echo">Echo</h2>
+<p>With the command echo and some redirects you can add text to a file, e.g:
+<code>echo test &gt; test.txt</code> which will overwrite the file or
+<code>echo test &gt;&gt; test.txt</code> which will append our text in the end of the file.</p>
+<h2 id="nano">Nano</h2>
+<p>Nano is a basic text editor preinstalled on most if not all systems, it allows for some basic text editing with some handy shortuctc you can see on the bottom side of the terminal for copying / cutting and pasting lines plus moving around.</p>
+<h2 id="vim">Vim</h2>
+<p>Vim is a huge issue on its own and I would recommend to anyone wanting to work in a terminal to learn moving around in vim as it can save you time. Its design is modal with 6 modes, 3 are the most important though.</p>
+<ol>
+<li>Normal</li>
+<li>Visual</li>
+<li>Insert</li>
+</ol>
+<p>In normal mode is where you execute your commands. For example by typing dd you can delete a line. Now how is that powerful you ask? You can use it do delete multiple lines! Doing a 2dd will delete 2 lines for example.(btw, when we saying delete in vim it means the text is being &ldquo;cut&rdquo;, meaning if you press p it will be pasted). ct. means c(hange)t(o). and it deletes everything before the next . in our text(cf. means delete the . too) and change the mode to insert mode.</p>
+<p>So what is insert mode? It&rsquo;s the mode where we insert(!) text, just like we would expect in every other editor. We get the by using i to insert where the cursor is, a to enter the next point of our cursor, o to enter on the next line. You get the point, there are many was to enter it all designed to save time by manipulating the cursor where we want it and not needing the use of a mouse.</p>
+<p>Finally visual mode is enter by typing v on normal mode and let&rsquo;s you select blocks of text to operate on them.</p>
+<p>Of course there are many other ways to interact with files and text but these are some of the simpler ones to help you do what you want a bit more efficiently.</p>
+<p>P.S.: I will try and add screenshots or gifs intergrated where i can show some of these features off so they are easier to understand.</p>
+<p>P.S.2: Always look into man pages with <code>man command</code> so you get a better understanding of the tools you are using plus what options their flags offer you.</p>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			
+		</div>
+	</article>
+</main>
+<footer>
+<hr><a class="soc" href="https://github.com/lpwlinux" title="Github"><i data-feather="github"></i></a>|⚡️
+	2020  <a href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+</footer>
+
+
+<script>
+      feather.replace()
+</script></div>
+    </body>
+</html>

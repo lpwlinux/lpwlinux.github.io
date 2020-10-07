@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Let&#39;s play with Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 22 Sep 2020 12:59:08 +0300</lastBuildDate><atom:link href="https://lpwlinux.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Sep 2020 20:29:03 +0300</lastBuildDate><atom:link href="https://lpwlinux.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Navigating the filesystem and manipulating files</title>
+      <link>https://lpwlinux.github.io/posts/navigation-and-file-manipulation/</link>
+      <pubDate>Mon, 28 Sep 2020 20:29:03 +0300</pubDate>
+      
+      <guid>https://lpwlinux.github.io/posts/navigation-and-file-manipulation/</guid>
+      <description>In the second post of the blog post we will discuss ways to navigate inside the filesystem, finding the files we are looking for and manipulating the text inside them.
+Navigation First of all, let&amp;rsquo;s start with &amp;ldquo;navigation&amp;rdquo;. Quotes in place because I am taking for granted you know how to cd into a directory and thus labeling navigation the way to find what you are looking for and then getting to it.</description>
+    </item>
+    
     <item>
       <title>Hello World</title>
       <link>https://lpwlinux.github.io/posts/hello-world/</link>
